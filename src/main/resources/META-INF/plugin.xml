@@ -363,9 +363,6 @@
         <action id="leetcode.LoginAction" class="com.shuzijun.leetcode.plugin.actions.toolbar.LoginAction"
                 text="Sign in" description="Sign in" icon="AllIcons.General.Web">
         </action>
-        <action id="leetcode.LogoutAction" class="com.shuzijun.leetcode.plugin.actions.toolbar.LogoutAction"
-                text="Sign out" description="Sign out" icon="AllIcons.Actions.Exit">
-        </action>
         <action id="leetcode.RefreshAction" class="com.shuzijun.leetcode.plugin.actions.toolbar.RefreshAction"
                 text="Refresh question" description="Refreshquestion" icon="AllIcons.Actions.Refresh">
         </action>

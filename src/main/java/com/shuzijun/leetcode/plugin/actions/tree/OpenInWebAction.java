@@ -14,7 +14,6 @@ import javax.swing.*;
 public class OpenInWebAction extends AbstractTreeAction {
     @Override
     public void actionPerformed(AnActionEvent anActionEvent, Config config, JTree tree, Question question) {
-
-        BrowserUtil.browse(URLUtils.getLeetcodeProblems() + question.getTitleSlug());
+        BrowserUtil.browse(URLUtils.getLeetcodeProblems() + question.getTitleSlug() + "/comments");
     }
 }
