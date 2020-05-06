@@ -86,5 +86,9 @@
 - **Editor菜单(在Editor上右击出现)**:  
   功能同上
   
+### 构建
+* gradlew buildPlugin
+
+  
 ### 常见问题  
   [常见问题](https://github.com/shuzijun/leetcode-editor/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)

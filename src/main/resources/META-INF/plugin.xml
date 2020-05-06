@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>leetcode-editor</id>
     <name>leetcode editor</name>
-    <version>6.4</version>
+    <version>6.4.1</version>
     <vendor email="shuzijun0109@gmail.com" url="https://github.com/shuzijun/idea-leetcode-plugin">shuzijun</vendor>
 
     <description><![CDATA[
@@ -113,14 +113,14 @@
 
     <change-notes><![CDATA[
          <ul>
-            <li>v6.4<br>
+            <li>v6.4.1<br>
                1.替换代理方式,与IDE保持一致.<br>
                2.增加转换蛇形命名.<br>
                3.导航栏增加展示登录人名称.<br>
                4.增加查看解决方案.<br>
                5.增加查看进展.<br>
             </li>
-            <li>v6.4<br>
+            <li>v6.4.1<br>
                1.Replace the proxy mode.<br>
                2.add snakeCaseName.<br>
                3.Navigation bar displays login information.<br>
@@ -383,24 +383,12 @@
                 text="Collapse All" description="Collapse All" icon="AllIcons.Actions.Collapseall">
         </action>
 
-        <action id="leetcode.HelpAction" class="com.shuzijun.leetcode.plugin.actions.toolbar.HelpAction"
-                text="Help" description="Help" icon="AllIcons.Actions.Help">
-        </action>
-
-        <action id="leetcode.OpenAction" class="com.shuzijun.leetcode.plugin.actions.tree.OpenAction"
-                text="open question" description="open question" icon="AllIcons.Actions.Annotate">
+        <action id="leetcode.OpenSolutionInWebAction" class="com.shuzijun.leetcode.plugin.actions.tree.OpenSolutionInWebAction"
+                text="open solution" description="open solution" icon="AllIcons.Actions.IntentionBulbGrey">
         </action>
 
         <action id="leetcode.OpenContentAction" class="com.shuzijun.leetcode.plugin.actions.tree.OpenContentAction"
                 text="open content" description="open content" icon="AllIcons.FileTypes.UiForm">
-        </action>
-        <action id="leetcode.OpenSolutionAction" class="com.shuzijun.leetcode.plugin.actions.tree.OpenSolutionAction"
-                text="open solution" description="open solution" icon="AllIcons.Actions.IntentionBulbGrey">
-        </action>
-
-
-        <action id="leetcode.OpenInWebAction" class="com.shuzijun.leetcode.plugin.actions.tree.OpenInWebAction"
-                text="open in web" description="open in web" icon="AllIcons.Actions.MoveTo2">
         </action>
 
         <action id="leetcode.SubmitAction" class="com.shuzijun.leetcode.plugin.actions.tree.SubmitAction"
@@ -425,7 +413,6 @@
 
         <group id="leetcode.NavigatorActionsToolbar">
             <reference id="leetcode.LoginAction"/>
-            <reference id="leetcode.LogoutAction"/>
             <separator/>
             <reference id="leetcode.RefreshAction"/>
             <reference id="leetcode.PickAction"/>
@@ -435,14 +422,11 @@
             <separator/>
             <reference id="leetcode.ConfigAction"/>
             <reference id="leetcode.ClearAllAction"/>
-            <reference id="leetcode.HelpAction"/>
         </group>
 
         <group id="leetcode.NavigatorActionsMenu">
-            <reference id="leetcode.OpenAction"/>
+            <reference id="leetcode.OpenSolutionInWebAction"/>
             <reference id="leetcode.OpenContentAction"/>
-            <reference id="leetcode.OpenSolutionAction"/>
-            <reference id="leetcode.OpenInWebAction"/>
             <separator/>
             <reference id="leetcode.SubmitAction"/>
             <reference id="leetcode.SubmissionsAction"/>
@@ -516,12 +500,9 @@
                     class="com.shuzijun.leetcode.plugin.actions.editor.OpenContentAction"
                     text="open content" description="open content(editor)" icon="AllIcons.FileTypes.UiForm">
             </action>
-            <action id="leetcode.editor.OpenSolutionAction" class="com.shuzijun.leetcode.plugin.actions.editor.OpenSolutionAction"
+            <action id="leetcode.editor.OpenSolutionInWebAction"
+                    class="com.shuzijun.leetcode.plugin.actions.editor.OpenSolutionInWebAction"
                     text="open solution" description="open solution" icon="AllIcons.Actions.IntentionBulbGrey">
-            </action>
-            <action id="leetcode.editor.OpenInWebAction"
-                    class="com.shuzijun.leetcode.plugin.actions.editor.OpenInWebAction"
-                    text="open in web" description="open in web(editor)" icon="AllIcons.Actions.MoveTo2">
             </action>
             <separator/>
             <group id="leetcode.editor.timer" popup="true" text="Timer" description="timer(editor)" icon="AllIcons.Vcs.History">
